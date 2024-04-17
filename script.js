@@ -117,3 +117,39 @@ function validateForm() {
     return false; // Prevent form submission
   }
 }
+
+// Function to fetch user data
+function getUserData() {
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm_password').value;
+
+  return {
+    username,
+    email,
+    phone,
+    password,
+    confirmPassword
+  };
+}
+
+// Function to handle form submission
+function handleFormSubmission() {
+  const userData = getUserData();
+  console.log(userData); // You can use the user data object here
+}
+
+// Event listener for form submission
+document.getElementById('Register').addEventListener('click', function(event) {
+  if (validateForm()) {
+    handleFormSubmission();
+  } else {
+    event.preventDefault(); // Prevent form submission if validation fails
+  }
+});
+
+
+
+

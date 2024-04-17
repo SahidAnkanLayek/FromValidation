@@ -5,75 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Registration Form</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/14357eeeba.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/14357eeeba.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <h2>User Registration Form</h2>
-      <form>
-        <div class="input-group">
-          <label for="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter  Username.."
-            onkeyup="validateUserName()";
-          />
-          <span id="error_user"></span>
-        </div>
-
-        <div class="input-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter Email Address.."
-            onkeyup="validateEmail()";
-          />
-          <span id="error_email"></span>
-        </div>
-
-        <div class="input-group">
-          <label for="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter  Phone Number.."
-            onkeyup="validatePhone()";
-          />
-          <span id="error_phone"></span>
-        </div>
-
-        <div class="input-group">
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter Password.."
-            onkeyup="validatePassword()";
-          />
-          <span id="error_password"></span>
-        </div>
-
-        <div class="input-group">
-          <label for="confirm_password">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirm_password"
-            name="confirm_password"
-            placeholder="Re-enter Password.."
-            onkeyup="validateConfirmPasword()";
-          />
-          <span id="error_cpassword"> </span>
-        </div>
-
-        <button type="button" id="Register" onclick="return validateForm()" >Register</button>
-        <span id="error_submit"></span>
-      </form>
+      <div class="form-div">
+        <form>
+          <div class="input-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter Username.."
+              onkeyup="validateUserName()"
+            />
+          </div>
+          <span id="error_user" class="error-message"></span>
+  
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email Address.."
+              onkeyup="validateEmail()"
+            />
+          </div>
+          <span id="error_email" class="error-message"></span>
+  
+          <div class="input-group">
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter Phone Number.."
+              onkeyup="validatePhone()"
+            />
+          </div>
+          <span id="error_phone" class="error-message"></span>
+  
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter Password.."
+              onkeyup="validatePassword()"
+            />
+          </div>
+          <span id="error_password" class="error-message"></span>
+  
+          <div class="input-group">
+            <label for="confirm_password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Re-enter Password.."
+              onkeyup="validateConfirmPasword()"
+            />
+          </div>
+          <span id="error_cpassword" class="error-message"></span>
+  
+          <button type="button" id="Register" onclick="return validateForm()">
+            Register
+          </button>
+          <span id="error_submit" class="error-message"></span>
+        </form>
+      </div>
+      
     </div>
     <script src="script.js"></script>
   </body>
